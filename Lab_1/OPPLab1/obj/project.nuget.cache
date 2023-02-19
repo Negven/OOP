@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "dgSpecHash": "NLiF6jSlpItHuRq8jLGkJVLnlaGMHRQYMvsgkYq4gvOCp+LErMC6tSOSuQvU+x7P1MneA1M6et+ExHGrUwA0pQ==",
+  "success": false,
+  "projectFilePath": "D:\\ch_projects\\OOP\\Lab_1\\OPPLab1\\OPPLab1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\super\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5). Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5) / win. Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5/win"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5) / win-x64. Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5/win-x64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5) / win-x86. Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5/win-x86"
+      ]
+    }
+  ]
+}

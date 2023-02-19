@@ -5,3 +5,10 @@ D:\ch_projects\OPPLab1\OPPLab1\obj\Debug\OPPLab1.csproj.SuggestedBindingRedirect
 D:\ch_projects\OPPLab1\OPPLab1\obj\Debug\OPPLab1.csproj.CoreCompileInputs.cache
 D:\ch_projects\OPPLab1\OPPLab1\obj\Debug\OPPLab1.exe
 D:\ch_projects\OPPLab1\OPPLab1\obj\Debug\OPPLab1.pdb
+D:\ch_projects\OOP\Lab_1\OPPLab1\obj\Debug\OPPLab1.csproj.AssemblyReference.cache
+D:\ch_projects\OOP\Lab_1\OPPLab1\obj\Debug\OPPLab1.csproj.SuggestedBindingRedirects.cache
+D:\ch_projects\OOP\Lab_1\OPPLab1\obj\Debug\OPPLab1.csproj.CoreCompileInputs.cache
+D:\ch_projects\OOP\Lab_1\OPPLab1\obj\Debug\OPPLab1.exe
+D:\ch_projects\OOP\Lab_1\OPPLab1\obj\Debug\OPPLab1.pdb
+D:\ch_projects\OOP\Lab_1\OPPLab1\bin\Debug\OPPLab1.exe
+D:\ch_projects\OOP\Lab_1\OPPLab1\bin\Debug\OPPLab1.pdb

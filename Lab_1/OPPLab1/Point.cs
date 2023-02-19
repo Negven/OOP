@@ -25,3 +25,4 @@
         public Point3D intersection;
     }
 }
+

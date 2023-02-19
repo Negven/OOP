@@ -43,6 +43,7 @@
         <Compile Include="Point.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="test.cs" />
         <Compile Include="TInterval2D.cs" />
         <Compile Include="TInterval3D.cs" />
     </ItemGroup>

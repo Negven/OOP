@@ -1,0 +1,167 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v3.5": {
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package"
+      }
+    },
+    ".NETFramework,Version=v3.5/win": {
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package"
+      }
+    },
+    ".NETFramework,Version=v3.5/win-x64": {
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package"
+      }
+    },
+    ".NETFramework,Version=v3.5/win-x86": {
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package"
+      }
+    }
+  },
+  "libraries": {
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v3.5": [
+      "System.Numerics.Vectors >= 4.5.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\super\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\ch_projects\\OOP\\Lab_1\\OPPLab1\\OPPLab1.csproj",
+      "projectName": "OPPLab1",
+      "projectPath": "D:\\ch_projects\\OOP\\Lab_1\\OPPLab1\\OPPLab1.csproj",
+      "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
+      "outputPath": "D:\\ch_projects\\OOP\\Lab_1\\OPPLab1\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net35"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net35": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net35": {
+        "dependencies": {
+          "System.Numerics.Vectors": {
+            "target": "Package",
+            "version": "[4.5.0, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5). Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5) / win. Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5/win"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5) / win-x64. Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5/win-x64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package System.Numerics.Vectors 4.5.0 is not compatible with net35 (.NETFramework,Version=v3.5) / win-x86. Package System.Numerics.Vectors 4.5.0 supports:\r\n  - monoandroid10 (MonoAndroid,Version=v1.0)\r\n  - monotouch10 (MonoTouch,Version=v1.0)\r\n  - net45 (.NETFramework,Version=v4.5)\r\n  - net46 (.NETFramework,Version=v4.6)\r\n  - netcoreapp2.0 (.NETCoreApp,Version=v2.0)\r\n  - netstandard1.0 (.NETStandard,Version=v1.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)\r\n  - portable-net45+win8+wp8+wpa81 (.NETPortable,Version=v0.0,Profile=Profile259)\r\n  - uap10.0.16299 (UAP,Version=v10.0.16299)\r\n  - xamarinios10 (Xamarin.iOS,Version=v1.0)\r\n  - xamarinmac20 (Xamarin.Mac,Version=v2.0)\r\n  - xamarintvos10 (Xamarin.TVOS,Version=v1.0)\r\n  - xamarinwatchos10 (Xamarin.WatchOS,Version=v1.0)",
+      "libraryId": "System.Numerics.Vectors",
+      "targetGraphs": [
+        ".NETFramework,Version=v3.5/win-x86"
+      ]
+    }
+  ]
+}
