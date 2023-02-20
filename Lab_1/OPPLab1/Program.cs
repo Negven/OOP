@@ -28,32 +28,43 @@ namespace OPPLab1
 
         public static void Main(string[] args)
         {
-            TInterval2D segment1 = new TInterval2D(0, 1, 2, 3);
-            TInterval2D segment2 = new TInterval2D(1, 2, 3, 4);
-            Console.WriteLine(TInterval2D.isLineIncludeAnotherLine(segment1, segment2) ? "Yes": "No");
+            // TInterval2D segment1 = new TInterval2D(0, 5, 0, 1);
+            // TInterval2D segment2 = new TInterval2D(1, 4, 1, 0);
+            // Console.WriteLine(TInterval2D.isLineIncludeAnotherLine(segment1, segment2) ? "Yes": "No");
             
             // TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
             // TInterval2D segment2 = new TInterval2D(1, 4, 5, 0);
             // TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
             // TInterval2D segment2 = new TInterval2D(0, 5, 5, 0);
             // TInterval2D s1Copy = new TInterval2D(segment1);
-            // TInterval3D segment1 = new TInterval3D(0, 1, 4, 5, 0, 0);
-            // TInterval3D segment2 = new TInterval3D(1, 4, 5, 0, 0, 0);
+            
+            // Console.WriteLine(TInterval3D.determinantMatrix(new double[,]
+            // {
+            //     {1, -2, 3},
+            //     {4, 0, 6},
+            //     {-7, 8, 9},
+            // }));
+            
+            TInterval3D segment1 = new TInterval3D(0, 1, 4, 5, 0, 0);
+            TInterval3D segment2 = new TInterval3D(1, 4, 5, 0, 0, 0);
+            
             // TInterval2D mul = segment1 * 2;
             // ConsoleOutPoint(mul.getA());
             // ConsoleOutPoint(mul.getB());
             // segment1.setA(0, -1);
             // ConsoleOutPoint(segment2.GetMidlePoint());
-            // Intersection2D i = default;
-            // i = segment1.findIntersectionPoint(segment2);
-            // if (i.isIntersection)
-            // {
-            //     ConsoleOutPoint(i.intersection);
-            // }
-            // else
-            // {
-            //     Console.WriteLine("not");
-            // }
+
+            Intersection3D i = default;
+            i = segment1.findIntersectionPoint(segment2);
+            if (i.isIntersection)
+            {
+                ConsoleOutPoint(i.intersection);
+            }
+            else
+            {
+                Console.WriteLine("not");
+            }
+            
             // ConsoleOutPoint(s1Copy.getA());
             
         }

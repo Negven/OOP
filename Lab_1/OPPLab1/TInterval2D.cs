@@ -99,12 +99,12 @@ namespace OPPLab1
             }
             else
             {
-                if (line2.a.x - line2.b.x != 0) 
+                if (line2.a.x - line2.b.x != 0 || line1.a.x != line2.a.x) 
                     return false;
                 if (line1.b.y > line1.a.y) Program.SwapPoints(ref line1.a, ref line1.b);
                 if (line2.b.y > line2.a.y) Program.SwapPoints(ref line2.a, ref line2.b);
                 if ((line2.a.y > line1.a.y && line2.b.y < line1.a.y) ||
-                    (line1.a.x > line2.a.x && line1.b.y < line2.a.y))
+                    (line1.a.y > line2.a.y && line1.b.y < line2.a.y))
                 {
                     return true;
                 }    
