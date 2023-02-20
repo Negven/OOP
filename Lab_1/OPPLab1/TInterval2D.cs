@@ -75,6 +75,42 @@ namespace OPPLab1
             return Math.Abs(apLength + bpLength - baLength) < 0.001;
 
         }
+
+        public static bool isLineIncludeAnotherLine(TInterval2D line1, TInterval2D line2)
+        {
+            double k1, k2;
+            if (line1.a.x - line1.b.x != 0)
+            {
+                k1 = (line1.a.y - line1.b.y) / (line1.a.x - line1.b.x);
+                if (line2.a.x - line2.b.x != 0)
+                {
+                    if (line1.a.x > line1.b.x) Program.SwapPoints(ref line1.a, ref line1.b);
+                    if (line2.a.x > line2.b.x) Program.SwapPoints(ref line2.a, ref line2.b);
+                    k2 = (line2.a.y - line2.b.y) / (line2.a.x - line2.b.x);
+                    if (Math.Abs(k2 - k1) < 0.001)
+                    {
+                        if ((line2.a.x > line1.a.x && line2.a.x < line1.b.x) ||
+                            (line1.a.x > line2.a.x && line1.a.x < line2.b.x))
+                        {
+                            return true;
+                        } 
+                    }
+                }
+            }
+            else
+            {
+                if (line2.a.x - line2.b.x != 0) 
+                    return false;
+                if (line1.b.y > line1.a.y) Program.SwapPoints(ref line1.a, ref line1.b);
+                if (line2.b.y > line2.a.y) Program.SwapPoints(ref line2.a, ref line2.b);
+                if ((line2.a.y > line1.a.y && line2.b.y < line1.a.y) ||
+                    (line1.a.x > line2.a.x && line1.b.y < line2.a.y))
+                {
+                    return true;
+                }    
+            }
+            return false;
+        }
         
         public Intersection2D findIntersectionPoint(TInterval2D secondLineSegment)
         {

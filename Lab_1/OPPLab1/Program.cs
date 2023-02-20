@@ -4,7 +4,7 @@ namespace OPPLab1
 {
     internal class Program
     {
-        public static void SwapPoints(Point2D p1, Point2D p2){
+        public static void SwapPoints(ref Point2D p1, ref Point2D p2){
             var c = p1.x;
             p1.x = p2.x;
             p2.x = c;
@@ -28,10 +28,14 @@ namespace OPPLab1
 
         public static void Main(string[] args)
         {
+            TInterval2D segment1 = new TInterval2D(0, 1, 2, 3);
+            TInterval2D segment2 = new TInterval2D(1, 2, 3, 4);
+            Console.WriteLine(TInterval2D.isLineIncludeAnotherLine(segment1, segment2) ? "Yes": "No");
+            
             // TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
             // TInterval2D segment2 = new TInterval2D(1, 4, 5, 0);
-            TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
-            TInterval2D segment2 = new TInterval2D(1, 2, 5, 6);
+            // TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
+            // TInterval2D segment2 = new TInterval2D(0, 5, 5, 0);
             // TInterval2D s1Copy = new TInterval2D(segment1);
             // TInterval3D segment1 = new TInterval3D(0, 1, 4, 5, 0, 0);
             // TInterval3D segment2 = new TInterval3D(1, 4, 5, 0, 0, 0);
@@ -40,17 +44,18 @@ namespace OPPLab1
             // ConsoleOutPoint(mul.getB());
             // segment1.setA(0, -1);
             // ConsoleOutPoint(segment2.GetMidlePoint());
-            Intersection2D i = default;
-            i = segment1.findIntersectionPoint(segment2);
-            if (i.isIntersection)
-            {
-                ConsoleOutPoint(i.intersection);
-            }
-            else
-            {
-                Console.WriteLine("not");
-            }
+            // Intersection2D i = default;
+            // i = segment1.findIntersectionPoint(segment2);
+            // if (i.isIntersection)
+            // {
+            //     ConsoleOutPoint(i.intersection);
+            // }
+            // else
+            // {
+            //     Console.WriteLine("not");
+            // }
             // ConsoleOutPoint(s1Copy.getA());
+            
         }
     }
 }
