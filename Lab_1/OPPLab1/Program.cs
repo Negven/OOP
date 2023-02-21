@@ -28,45 +28,123 @@ namespace OPPLab1
 
         public static void Main(string[] args)
         {
-            // TInterval2D segment1 = new TInterval2D(0, 5, 0, 1);
-            // TInterval2D segment2 = new TInterval2D(1, 4, 1, 0);
-            // Console.WriteLine(TInterval2D.isLineIncludeAnotherLine(segment1, segment2) ? "Yes": "No");
-            
-            // TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
-            // TInterval2D segment2 = new TInterval2D(1, 4, 5, 0);
-            // TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
-            // TInterval2D segment2 = new TInterval2D(0, 5, 5, 0);
-            // TInterval2D s1Copy = new TInterval2D(segment1);
-            
-            // Console.WriteLine(TInterval3D.determinantMatrix(new double[,]
-            // {
-            //     {1, -2, 3},
-            //     {4, 0, 6},
-            //     {-7, 8, 9},
-            // }));
-            
-            TInterval3D segment1 = new TInterval3D(0, 1, 4, 5, 0, 0);
-            TInterval3D segment2 = new TInterval3D(1, 4, 5, 0, 0, 0);
-            
-            // TInterval2D mul = segment1 * 2;
-            // ConsoleOutPoint(mul.getA());
-            // ConsoleOutPoint(mul.getB());
-            // segment1.setA(0, -1);
-            // ConsoleOutPoint(segment2.GetMidlePoint());
-
-            Intersection3D i = default;
-            i = segment1.findIntersectionPoint(segment2);
-            if (i.isIntersection)
+            int answerNumber = 1;
+            string spaceName = "";
+            Console.WriteLine();
+            Console.WriteLine("2D or 3D?");
+            spaceName = Console.ReadLine();
+            while (spaceName != "2D" && spaceName != "3D")
             {
-                ConsoleOutPoint(i.intersection);
+                Console.WriteLine("Enter correct variant");
+                spaceName = Console.ReadLine();
+            }
+
+            if (spaceName == "2D")
+            {
+                TInterval2D[] intervals = { new TInterval2D(), new TInterval2D() };
+                for (int intervalCounter = 1; intervalCounter < 3; intervalCounter++)
+                {
+                    Console.WriteLine("Interval " + intervalCounter);
+                    double x1, y1, x2, y2;
+                    Console.Write("x1: ");
+                    x1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("y1: ");
+                    y1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("x2: ");
+                    x2 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("y2: ");
+                    y2 = Convert.ToDouble(Console.ReadLine());
+                    intervals[intervalCounter - 1] = new TInterval2D(x1, y1, x2, y2);
+                }
+                
+                Intersection2D intersection2D = intervals[0].findIntersectionPoint(intervals[1]);
+                if (intersection2D.isIntersection)
+                {
+                    Console.WriteLine("Intersection: ");
+                    ConsoleOutPoint(intersection2D.intersection);
+                }
+                else
+                {
+                    Console.WriteLine("They haven`t got intersection");
+                }
+                
+                Console.WriteLine("Interval 1 length: " + intervals[0].GetLength());
+                Console.WriteLine("Interval 2 length: " + intervals[1].GetLength());
+                
+                Console.WriteLine("Interval 1 centre point: ");
+                ConsoleOutPoint(intervals[0].GetMidlePoint());
+                Console.WriteLine("Interval 2 centre point: ");
+                ConsoleOutPoint(intervals[1].GetMidlePoint());
+
+                Console.WriteLine("Sum of intervals");
+                TInterval2D sum = intervals[0] + intervals[1];
+                ConsoleOutPoint(sum.getA());
+                ConsoleOutPoint(sum.getB());
+
+                double k;
+                Console.WriteLine("Multiply intervals");
+                Console.Write("Enter k: ");
+                k = Convert.ToDouble(Console.ReadLine());
+                TInterval2D mul = intervals[0] * k;
+                ConsoleOutPoint(mul.getA());
+                ConsoleOutPoint(mul.getB());
             }
             else
             {
-                Console.WriteLine("not");
+                 TInterval3D[] intervals = { new TInterval3D(), new TInterval3D() };
+                for (int intervalCounter = 1; intervalCounter < 3; intervalCounter++)
+                {
+                    Console.WriteLine("Interval " + intervalCounter);
+                    double x1, y1, x2, y2, z1, z2;
+                    Console.Write("x1: ");
+                    x1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("y1: ");
+                    y1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("x2: ");
+                    x2 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("y2: ");
+                    y2 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("z1: ");
+                    z1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("z2: ");
+                    z2 = Convert.ToDouble(Console.ReadLine());
+                    intervals[intervalCounter - 1] = new TInterval3D(x1, y1, x2, y2, z1, z2);
+                }
+                
+                Intersection3D intersection3D = intervals[0].findIntersectionPoint(intervals[1]);
+                if (intersection3D.isIntersection)
+                {
+                    Console.WriteLine("Intersection: ");
+                    ConsoleOutPoint(intersection3D.intersection);
+                }
+                else
+                {
+                    Console.WriteLine("They haven`t got intersection");
+                }
+                
+                Console.WriteLine("Interval 1 length: " + intervals[0].GetLength());
+                Console.WriteLine("Interval 2 length: " + intervals[1].GetLength());
+                
+                Console.WriteLine("Interval 1 centre point: ");
+                ConsoleOutPoint(intervals[0].GetMidlePoint());
+                Console.WriteLine("Interval 2 centre point: ");
+                ConsoleOutPoint(intervals[1].GetMidlePoint());
+
+                Console.WriteLine("Sum of intervals");
+                TInterval3D sum = intervals[0] + intervals[1];
+                ConsoleOutPoint(sum.getA());
+                ConsoleOutPoint(sum.getB());
+
+                double k;
+                Console.WriteLine("Multiply intervals");
+                Console.Write("Enter k: ");
+                k = Convert.ToDouble(Console.ReadLine());
+                TInterval3D mul = intervals[0] * k;
+                ConsoleOutPoint(mul.getA());
+                ConsoleOutPoint(mul.getB());
             }
-            
-            // ConsoleOutPoint(s1Copy.getA());
-            
+            // TInterval2D segment1 = new TInterval2D(0, 1, 4, 5);
+            // TInterval2D segment2 = new TInterval2D(1, 4, 5, 0);
         }
     }
 }

@@ -1,6 +1,10 @@
 ﻿using System;
 
 
+
+
+
+
 namespace OPPLab1
 {
     public class TInterval3D: TInterval2D
@@ -86,7 +90,7 @@ namespace OPPLab1
             return determinantMatrix(spaceMatrix) == 0;
         }
         
-        public Intersection3D findIntersectionPoint(TInterval3D secondLineSegment)
+        public Intersection3D findIntersectionPoint(TInterval3D secondLineSegment)  
         {
             Intersection3D answer = default;
 
@@ -129,11 +133,20 @@ namespace OPPLab1
                 answer.intersection.y = interXY.isIntersection ? interXY.intersection.y : interYZ.intersection.x;
                 answer.intersection.z = interYZ.isIntersection ? interYZ.intersection.y : interXZ.intersection.y;
                 
-                // { x = interXZ.intersection.x, y = interXY.intersection.y, z = interYZ.intersection.y };
                 return answer;
             }
             answer.isIntersection = false;
             return answer;
+        }
+
+        public static TInterval3D operator +(TInterval3D line1, TInterval3D line2) =>
+            new TInterval3D(line1.a.x, line1.a.y, line2.b.x, line2.b.y, line1.az, line2.bz);
+
+        public static TInterval3D operator *(TInterval3D line, double k)
+        {
+            TInterval2D line2D = (new TInterval2D(line.a.x, line.a.y, line.b.x, line.b.y)) * k;
+            double bz = line.az + (line.bz - line.az) * k;
+            return new TInterval3D(line2D.getA().x, line2D.getA().y, line2D.getB().x, line2D.getB().y, line.az, bz);
         }
     }
 }
