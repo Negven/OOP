@@ -56,7 +56,6 @@ namespace OPPLab1
                     y2 = Convert.ToDouble(Console.ReadLine());
                     intervals[intervalCounter - 1] = new TInterval2D(x1, y1, x2, y2);
                 }
-                
                 Intersection2D intersection2D = intervals[0].findIntersectionPoint(intervals[1]);
                 if (intersection2D.isIntersection)
                 {
@@ -65,6 +64,11 @@ namespace OPPLab1
                 }
                 else
                 {
+                    if (TInterval2D.isLineIncludeAnotherLine(intervals[0], intervals[1]))
+                    {
+                        Console.WriteLine("One line include part");
+
+                    }
                     Console.WriteLine("They haven`t got intersection");
                 }
                 
