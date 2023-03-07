@@ -5,7 +5,7 @@ namespace lab2
     internal class Program
     {
 
-        static void task1()
+        static void task1_1()
         {
             Console.WriteLine("Enter n: ");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -32,15 +32,53 @@ namespace lab2
                 if (elY > 0) z[zIndex++] = elY;
             }
 
-            foreach (var elZ in z)
+            outArray(zLength, z);
+        }
+
+        public static void enterArray(int n, ref double[] arr)
+        {
+            for (int i = 0; i < n; i++)
             {
-                Console.Write(elZ + ", ");
+                Console.Write("Enter " + (i + 1) + ": ");
+                arr[i] = Convert.ToDouble(Console.ReadLine());
             }
+        }
+
+        public static void outArray(int n, double[] arr)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(arr[i] + ", ");
+            }
+        }
+
+        public static void task1_2()
+        {
+            Console.WriteLine("Enter n: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            
+            double[] a = new double[n];
+            Console.WriteLine("Enter a");
+            enterArray(n, ref a);
+            double[] b = new double[n];
+            Console.WriteLine("Enter b");
+            enterArray(n, ref b);
+            double[] c = new double[n];
+            Console.WriteLine("Enter c");
+            enterArray(n, ref c);
+            
+            
+            for (int i = 0; i < n; i++)
+            {
+                c[i] = 2 * (a[i] + c[i]) - b[i];
+            }
+
+            outArray(n, c);
         }
         public static void Main(string[] args)
         {
-            task1();
-            
+            task1_1();
+            task1_2();
         }
     }   
 }
