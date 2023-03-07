@@ -4,7 +4,8 @@ namespace lab2
 {
     internal class Program
     {
-        public static void Main(string[] args)
+
+        static void task1()
         {
             Console.WriteLine("Enter n: ");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -35,6 +36,11 @@ namespace lab2
             {
                 Console.Write(elZ + ", ");
             }
+        }
+        public static void Main(string[] args)
+        {
+            task1();
+            
         }
     }   
 }
