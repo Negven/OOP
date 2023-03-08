@@ -140,21 +140,10 @@ namespace lab2
             outArray(n, arr);
         }
 
-        
-        public static void task2_1()
+        private static int[,] goCycle(int a, int b, int[,] matrix, int k)
         {
-                 
-            Console.Write("Enter a: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("Enter b: ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            
-            int[,] matrix = new int[a, b];
             int[,] matrixNew = new int[a, b];
-
-            enterArray(a, b, ref matrix);
-
+            
             for (int x = 0; x < a; x++)
             {
                 for (int y = 0; y < b; y++)
@@ -164,11 +153,6 @@ namespace lab2
 
             }
             
-            Console.Write("Enter k: ");
-            int k = Convert.ToInt32(Console.ReadLine());
-            
-            outArray(a, b, matrix);
-
             for (int x = 0; x < a; x++)
             {
                 for (int y = 1; y < b; y+=2)
@@ -186,6 +170,26 @@ namespace lab2
                     matrixNew[x, yNew] = matrix[x, y];
                 }
             }
+
+            return matrixNew;
+        }
+        
+        public static void task2_1()
+        {
+            Console.Write("Enter a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int[,] matrix = new int[a, b];
+            int[,] matrixNew = new int[a, b];
+
+            enterArray(a, b, ref matrix);
+            Console.Write("Enter k: ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            outArray(a, b, matrix);
+
+            matrixNew = goCycle(a, b, matrix, k);
+
             Console.WriteLine("--------");
             outArray(a, b, matrixNew);
         }
@@ -201,16 +205,6 @@ namespace lab2
             return answer;
         }
         
-        public static bool isColumnIsZero(int[,] matrix, int a, int numberColumn)
-        {
-            bool answer = true;
-            for (int x = 0; x < a; x++)
-            {
-                if (matrix[x, numberColumn] != 0) answer = false;
-            }
-
-            return answer;
-        }
 
         public static void TransposeMatrix(ref int[,] matrix, ref int a, ref int b)
         {
