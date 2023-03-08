@@ -289,6 +289,47 @@ namespace lab2
             outArray(a, b, matrix);
 
         }
+
+        public static void task2_3()
+        {
+                        
+            Console.Write("Enter a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Enter b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int[,] matrix = new int[a, b];
+            enterArray(a, b, ref matrix);
+            outArray(a, b, matrix);
+            int numberOfLine = -1;
+            for (int x = 0; x < a; x++)
+            {
+                bool hasPositiveNumber = false;
+                for (int y = 0; y < b; y++)
+                {
+                    if (matrix[x, y] > 0)
+                    {
+                        hasPositiveNumber = true;
+                        break;
+                    }
+                }
+
+                if (hasPositiveNumber)
+                {
+                    numberOfLine = x + 1;
+                    break;
+                }
+            }
+
+            if (numberOfLine == -1)
+            {
+                Console.WriteLine("There isn`t positive number");
+            }
+            else
+            {
+                Console.WriteLine("Number of line is " + numberOfLine);
+            }
+        }
         
         public static void Main(string[] args)
         {
@@ -297,8 +338,7 @@ namespace lab2
             task1_3();   
             task2_1();
             task2_2();
-
-
+            task2_3();
         }
     }   
 }
