@@ -167,12 +167,21 @@ namespace lab2
             
             outArray(a, b, matrix);
 
-            for (int x = 1; x < a; x += 2)
+            for (int x = 0; x < a; x++)
             {
-                for (int y = 0; y < b; y++)
+                for (int y = 1; y < b; y+=2)
                 {
-                    int xNew = (k * 2 + x) % b;
-                    matrixNew[xNew, y] = matrix[x, y];
+                    int yNew;
+                    if (b % 2 == 0)
+                    {
+                        yNew = (k * 2 + y) % b;  
+                        
+                    }
+                    else
+                    {
+                        yNew = k * 2 + y < b ? k * 2 + y : (k * 2 + y) % b + 1;
+                    }
+                    matrixNew[x, yNew] = matrix[x, y];
                 }
             }
             Console.WriteLine("--------");
