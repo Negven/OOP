@@ -286,18 +286,8 @@ namespace lab2
 
         }
 
-        public static void task2_3()
+        public static int findPositiveLine(int a, int b, int[,] matrix)
         {
-                        
-            Console.Write("Enter a: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("Enter b: ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            int[,] matrix = new int[a, b];
-            enterArray(a, b, ref matrix);
-            outArray(a, b, matrix);
-            int numberOfLine = -1;
             for (int x = 0; x < a; x++)
             {
                 bool hasPositiveNumber = false;
@@ -309,14 +299,25 @@ namespace lab2
                         break;
                     }
                 }
-
-                if (hasPositiveNumber)
-                {
-                    numberOfLine = x + 1;
-                    break;
-                }
+                if (hasPositiveNumber) return x + 1;
             }
 
+            return -1;
+        }
+        
+        public static void task2_3()
+        {
+                        
+            Console.Write("Enter a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Enter b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int[,] matrix = new int[a, b];
+            enterArray(a, b, ref matrix);
+            outArray(a, b, matrix);
+            int numberOfLine = findPositiveLine(a, b, matrix);
+            
             if (numberOfLine == -1)
             {
                 Console.WriteLine("There isn`t positive number");
