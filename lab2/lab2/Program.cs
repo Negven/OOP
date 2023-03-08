@@ -75,10 +75,50 @@ namespace lab2
 
             outArray(n, c);
         }
+
+        public static void task1_3()
+        {
+            Console.Write("Enter n: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            
+            double[] arr = new double[n];
+            Console.WriteLine("Enter array");
+            enterArray(n, ref arr);
+
+            int a, b;
+            Console.Write("Enter a: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter b: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            double[] secondArr = new double[n];
+            int secondCounter = 0;
+            int newLength = n;
+            for (int i = 0; i < newLength; i++)
+            {
+                if (!((int)Math.Floor(arr[i]) >= a && (int)Math.Floor(arr[i]) <= b))
+                {
+                    double el = arr[i];
+                    for (int k = i; k < n - 1; k++)
+                    {
+                        arr[k] = arr[k + 1];
+                    }
+                    i--;
+                    newLength--;
+                    secondArr[secondCounter++] = el;
+                }
+            }
+
+            for (int i = 0; i < secondCounter; i++)
+            {
+                arr[n - secondCounter + i] = secondArr[i];
+            }
+            outArray(n, arr);
+        }
         public static void Main(string[] args)
         {
             task1_1();
             task1_2();
+            task1_3();   
         }
     }   
 }
