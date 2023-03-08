@@ -43,12 +43,36 @@ namespace lab2
                 arr[i] = Convert.ToDouble(Console.ReadLine());
             }
         }
+        
+        public static void enterArray(int a, int b, ref int[,] matrix)
+        {
+            for (int x = 0; x < a; x++)
+            {
+                for (int y = 0; y < b; y++)
+                {
+                    Console.Write("Enter (" + (x + 1) + ", " + (y + 1) + "): ");
+                    matrix[x, y] =  Convert.ToInt32(Console.ReadLine());
+                }
+            }
+        }
 
         public static void outArray(int n, double[] arr)
         {
             for (int i = 0; i < n; i++)
             {
                 Console.Write(arr[i] + ", ");
+            }
+        }
+        
+        public static void outArray(int a, int b, ref int[,] matrix)
+        {
+            for (int x = 0; x < a; x++)
+            {
+                for (int y = 0; y < b; y++)
+                {
+                    Console.Write(matrix[y, x] + " ");
+                }
+                Console.WriteLine();
             }
         }
 
@@ -114,11 +138,53 @@ namespace lab2
             }
             outArray(n, arr);
         }
+
+        public static void task2_1()
+        {
+                 
+            Console.Write("Enter a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Enter b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            
+            int[,] matrix = new int[a, b];
+            int[,] matrixNew = new int[a, b];
+
+            enterArray(a, b, ref matrix);
+
+            for (int x = 0; x < a; x++)
+            {
+                for (int y = 0; y < b; y++)
+                {
+                    matrixNew[x, y] = matrix[x, y];
+                }
+
+            }
+            
+            Console.Write("Enter k: ");
+            int k = Convert.ToInt32(Console.ReadLine());
+            
+            outArray(a, b, ref matrix);
+
+            for (int x = 1; x < a; x += 2)
+            {
+                for (int y = 0; y < b; y++)
+                {
+                    int xNew = (k * 2 + x) % b;
+                    matrixNew[xNew, y] = matrix[x, y];
+                }
+            }
+            Console.WriteLine("--------");
+            outArray(a, b, ref matrixNew);
+        }
+        
         public static void Main(string[] args)
         {
             task1_1();
             task1_2();
             task1_3();   
+            task2_1();
         }
     }   
 }
