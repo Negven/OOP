@@ -62,6 +62,7 @@ namespace lab2
             {
                 Console.Write(arr[i] + ", ");
             }
+            Console.WriteLine();
         }
         
         public static void outArray(int a, int b, int[,] matrix)
@@ -139,6 +140,7 @@ namespace lab2
             outArray(n, arr);
         }
 
+        
         public static void task2_1()
         {
                  
