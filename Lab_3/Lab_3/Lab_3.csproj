@@ -42,6 +42,7 @@
         <Compile Include="ArrOneSpace.cs" />
         <Compile Include="ISumMinMax.cs" />
         <Compile Include="Program.cs" />
+        <Compile Include="Properties\ArrTwoSpace.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

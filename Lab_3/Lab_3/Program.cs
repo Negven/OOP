@@ -1,4 +1,5 @@
 ﻿using System;
+using Lab_3.Properties;
 
 namespace Lab_3
 {
@@ -6,7 +7,7 @@ namespace Lab_3
     {
         public static void Main(string[] args)
         {
-            ArrOneSpace arrOne = new ArrOneSpace(new  int[4]{3, 5, 1, 4});
+            ArrTwoSpace arrOne = new ArrTwoSpace(new  int[2, 4]{ { 3, 5, -3, 4 }, {10, 2, 3, 2}});
             Console.WriteLine(arrOne.sumMinMax());
         }
     }
