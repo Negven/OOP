@@ -1,0 +1,7 @@
+D:\ch_projects\OOP\Lab_3\Lab_3\bin\Debug\Lab_3.exe
+D:\ch_projects\OOP\Lab_3\Lab_3\bin\Debug\Lab_3.pdb
+D:\ch_projects\OOP\Lab_3\Lab_3\obj\Debug\Lab_3.csproj.AssemblyReference.cache
+D:\ch_projects\OOP\Lab_3\Lab_3\obj\Debug\Lab_3.csproj.SuggestedBindingRedirects.cache
+D:\ch_projects\OOP\Lab_3\Lab_3\obj\Debug\Lab_3.csproj.CoreCompileInputs.cache
+D:\ch_projects\OOP\Lab_3\Lab_3\obj\Debug\Lab_3.exe
+D:\ch_projects\OOP\Lab_3\Lab_3\obj\Debug\Lab_3.pdb
