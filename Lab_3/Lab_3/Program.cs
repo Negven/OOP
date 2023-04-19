@@ -21,7 +21,10 @@ namespace Lab_3
                 }
 
                 ArrOneSpace arrOne = new ArrOneSpace(arr);
-                Console.WriteLine(arrOne.sumMinMax());
+                Console.WriteLine("Sum: " + arrOne.sum());
+                Console.WriteLine("Min: " + arrOne.findMin());
+                Console.WriteLine("Max: " + arrOne.findMax());
+                Console.WriteLine("Sum min and max: " +  arrOne.sumMinMax());
             }
 
             if (numberSpace == 2)
@@ -40,6 +43,10 @@ namespace Lab_3
                 }
 
                 ArrTwoSpace arrOne = new ArrTwoSpace(arr);
+                Console.WriteLine("Sum: " + arrOne.sum());
+                Console.WriteLine("Min: " + arrOne.findMin());
+                Console.WriteLine("Max: " + arrOne.findMax());
+                Console.WriteLine("Sum min and max: " +  arrOne.sumMinMax());
                 Console.WriteLine(arrOne.sumMinMax());
             }
         }
