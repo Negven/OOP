@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Ports;
 using System.Linq;
+using System.Globalization;
 
 namespace lab_4
 {
@@ -14,8 +15,14 @@ namespace lab_4
 
         public static readonly string[] shortWords = new[]
         {
-            "do", "is", "no", "we", "go"
+            "do", "is", "no", "we", "go", "me", "I"
         };
+        
+        public static readonly string[] banWord = new[]
+        {
+            "the"
+        };
+
 
         public static List<string> splitTextByWords(char[] text)
         {
@@ -24,13 +31,20 @@ namespace lab_4
             while (indexText < text.Length)
             {
                 string word = "";
-                while (indexText < text.Length && alphabet.Contains(text[indexText]))
+                while (indexText < text.Length && alphabet.Contains(Char.ToLower(text[indexText])))
                 {
                     word += text[indexText];
                     indexText++;
                 }
-                if(word.Length > 2) result.Add(word);
-                if (word.Length == 2)
+
+                if (word.Length > 2)
+                {
+                    if (!banWord.Contains(word.ToLower()))
+                    {
+                        result.Add(word);
+                    }
+                }
+                if (word.Length == 2 || word.Length == 1)
                 {
                     if(shortWords.Contains(word)) result.Add(word);
                 }
